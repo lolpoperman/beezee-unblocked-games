@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Center Text Animation</title>
+    <!-- Import the Lilita One font from Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Lilita One', cursive;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: #000; /* Optional: Change background color */
+            color: #fff; /* Optional: Change text color */
+        }
+
+        .container {
+            font-size: 48px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            opacity: 0;
+            animation: fadeInOut 3s ease-in-out forwards;
+        }
+
+        .bottom-center-label {
+            font-size: 48px;
+            margin-top: 10px;
+        }
+
+        /* Keyframes for fading in and out */
+        @keyframes fadeInOut {
+            0% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <label>Unblocked Games At Your Fingertips</label>
+        <div class="bottom-center-label">Fingertips</div>
+    </div>
+
+    <script>
+        // Redirect to another page after the animation
+        setTimeout(function() {
+            // Use a known website like Google for testing
+            window.location.href = 'https://lolpoperman.github.io/beezee-unblocked-games/'; // Replace with your URL
+        }, 3000); // Adjust timing if necessary
+    </script>
+</body>
+</html>
