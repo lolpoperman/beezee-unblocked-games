@@ -1,24 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script>
-        // Redirect immediately to the animation page
-        window.location.href = 'https://lolpoperman.github.io/beezee-unblocked-games/animation.html';
-  <link rel="stylesheet" href="style.css">
-  <title>IXL</title>
-  <link rel="icon" type="images/ixl-icon.png" href="https://blog.ixl.com/wp-content/uploads/2020/03/favicon.png">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>IXL</title>
+    <link rel="icon" type="image/png" href="https://blog.ixl.com/wp-content/uploads/2020/03/favicon.png">
+    <style>
+        /* Full-Screen Overlay Styling for Animation */
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Lilita One', cursive;
+            overflow: hidden; /* Prevent scrolling during animation */
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #000; /* Optional: Change background color */
+            color: #fff; /* Optional: Change text color */
+            z-index: 1000; /* Ensure it covers everything */
+        }
+
+        .overlay .container {
+            font-size: 48px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            opacity: 0;
+            animation: fadeInOut 3s ease-in-out forwards;
+        }
+
+        .bottom-center-label {
+            font-size: 48px;
+            margin-top: 10px;
+        }
+
+        @keyframes fadeInOut {
+            0% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+
+        /* Main content styling */
+        .main-content {
+            display: none;
+            text-align: center;
+        }
+
+        .container {
+            font-size: 24px; /* Adjust if needed */
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <a href="games/sigmayoutube.html">
-      <img src="https://store-images.s-microsoft.com/image/apps.3343.9007199266251606.f9459c88-609f-40df-aa7c-f864f4965cd0.c82e9c30-5a81-4eec-a4a9-290f8c3f31c2" alt="Cookie Clicker Icon" class="icon first-icon">
-    </a>
-    <a href="games/stickmanhook.html">
-      <img src="https://images.sftcdn.net/images/t_app-icon-m/p/2cf5a7f7-5e3d-4f63-ab1c-dca1720090f8/3235123127/cookie-clicker-Cookie%20Clicker-icon.png" alt="Second Icon" class="icon second-icon">
-    </a>
-  </div>
+    <!-- Animation Overlay -->
+    <div class="overlay">
+        <div class="container">
+            <label>Unblocked Games At Your Fingertips</label>
+            <div class="bottom-center-label">Fingertips</div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="container">
+            <a href="games/sigmayoutube.html">
+                <img src="https://store-images.s-microsoft.com/image/apps.3343.9007199266251606.f9459c88-609f-40df-aa7c-f864f4965cd0.c82e9c30-5a81-4eec-a4a9-290f8c3f31c2" alt="Cookie Clicker Icon" class="icon first-icon">
+            </a>
+            <a href="games/stickmanhook.html">
+                <img src="https://images.sftcdn.net/images/t_app-icon-m/p/2cf5a7f7-5e3d-4f63-ab1c-dca1720090f8/3235123127/cookie-clicker-Cookie%20Clicker-icon.png" alt="Second Icon" class="icon second-icon">
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Function to handle the redirection after the animation
+        function handleRedirect() {
+            window.location.href = 'https://lolpoperman.github.io/beezee-unblocked-games/mainpage.html'; // Replace with your URL
+        }
+
+        // Show main content and redirect after the animation
+        setTimeout(function() {
+            document.querySelector('.overlay').style.display = 'none'; // Hide overlay
+            document.querySelector('.main-content').style.display = 'block'; // Show main content
+            handleRedirect(); // Redirect to the new page
+        }, 3000); // Adjust timing if necessary
+    </script>
 </body>
 </html>
